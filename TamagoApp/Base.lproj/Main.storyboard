@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TamagoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvg-eC-zmj">
+                                <rect key="frame" x="0.0" y="131.5" width="320" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tvg-eC-zmj" secondAttribute="height" multiplier="322:307" id="vXI-bn-Ma1"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="卵"/>
+                                <connections>
+                                    <action selector="TamagoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O06-HX-QgZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdh-aN-1wO">
+                                <rect key="frame" x="8" y="52" width="304" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcp-gy-JHv">
+                                <rect key="frame" x="20" y="82" width="280" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xg4-4O-rta">
+                                <rect key="frame" x="8" y="465" width="304" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xg4-4O-rta" secondAttribute="trailing" constant="8" id="1kN-ze-l8K"/>
+                            <constraint firstItem="Dcp-gy-JHv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Fj-k4-275"/>
+                            <constraint firstItem="Mdh-aN-1wO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ge7-KT-w3T"/>
+                            <constraint firstItem="Dcp-gy-JHv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IPx-VM-Bsr"/>
+                            <constraint firstItem="Mdh-aN-1wO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="IRy-TM-bcP"/>
+                            <constraint firstItem="tvg-eC-zmj" firstAttribute="top" secondItem="Dcp-gy-JHv" secondAttribute="bottom" constant="10.5" id="KpZ-Kf-gvR"/>
+                            <constraint firstAttribute="trailing" secondItem="tvg-eC-zmj" secondAttribute="trailing" id="Kpc-qq-Kzf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dcp-gy-JHv" secondAttribute="trailing" constant="20" id="MOn-HS-629"/>
+                            <constraint firstItem="xg4-4O-rta" firstAttribute="top" secondItem="tvg-eC-zmj" secondAttribute="bottom" constant="28.5" id="O7G-LA-qR1"/>
+                            <constraint firstItem="tvg-eC-zmj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OKe-1R-B3E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xg4-4O-rta" secondAttribute="bottom" constant="50" id="QPT-rO-jtr"/>
+                            <constraint firstItem="tvg-eC-zmj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S39-Sx-I5r"/>
+                            <constraint firstItem="xg4-4O-rta" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="SA6-Cd-LFH"/>
+                            <constraint firstItem="xg4-4O-rta" firstAttribute="top" secondItem="Mdh-aN-1wO" secondAttribute="bottom" constant="331.5" id="bCx-Ha-Ber"/>
+                            <constraint firstItem="Mdh-aN-1wO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="cH0-aw-Eaq"/>
+                            <constraint firstItem="tvg-eC-zmj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kHp-nn-p5S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mdh-aN-1wO" secondAttribute="trailing" constant="8" id="lnc-hB-ASb"/>
+                            <constraint firstItem="Dcp-gy-JHv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="yYR-c9-BNG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomLabel" destination="xg4-4O-rta" id="3ke-hN-fOu"/>
+                        <outlet property="topComment" destination="Dcp-gy-JHv" id="jum-rK-VGG"/>
+                        <outlet property="topLabel" destination="Mdh-aN-1wO" id="vjx-Sk-mVR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-80.625" y="133.09859154929578"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="卵" width="600" height="600"/>
+    </resources>
 </document>
